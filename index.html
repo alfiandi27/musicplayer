@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Music Player</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="splash">
+      <div>
+        <h1>ONLINE</h1>
+        <h1>MUSIC</h1>
+        <h1>PLAYER</h1>
+        <p>Developed by Aldi Alfiandi</p>
+      </div>
+    </div>
+
+    <div id="navbar">
+      <a href="./" id="logo">ONLINE MUSIC PLAYER</a>
+      <div>
+        <input type="text" id="search" placeholder="Cari lagu..." />
+        <input type="text" id="find" placeholder="Cari lagu..." />
+      </div>
+    </div>
+
+    <div id="layout">
+      <div id="detail">
+        <img src="" alt="gambar" id="bg" />
+        <div id="figure">
+          <img src="" alt="gambar" id="cover2" />
+          <h3 id="title2">Judul Lagu</h3>
+          <p id="artist2">Nama Musisi</p>
+          <div id="controls">
+            <button type="button" id="backBtn"><</button>
+            <button type="button" id="playPauseBtn">Main</button>
+            <button type="button" id="nextBtn">></button>
+          </div>
+          <label for="volume">Volume: </label>
+          <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+      </div>
+      <div id="main"></div>
+    </div>
+
+    <div id="player">
+      <img src="" alt="gambar" id="cover" />
+      <div id="info">
+        <p id="title">Judul Lagu</p>
+        <p id="artist">Nama Musisi</p>
+      </div>
+      <audio id="audio" controls>
+        <source src="" type="audio/mpeg" id="source" />
+      </audio>
+    </div>
+
+    <div id="footer">
+      <a onclick="tampil(0)">Daftar Lagu</a>
+      <a onclick="tampil(1)">Pemutar</a>
+    </div>
+  </body>
+</html>
+<script src="./index.js"></script>

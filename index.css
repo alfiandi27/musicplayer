@@ -1,0 +1,560 @@
+* {
+  margin: auto;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 601px) {
+  #splash {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+  }
+
+  #splash div {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 25% auto;
+    transform: translate(35%, -50%);
+    border-left: 2px solid #fff;
+    padding-left: 15px;
+  }
+
+  #splash div h1 {
+    font-size: 55pt;
+    margin-bottom: 10px;
+  }
+
+  #navbar,
+  #layout {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  #navbar {
+    background: #222;
+    color: #fff;
+    border-bottom: 1px solid #333;
+  }
+
+  #logo {
+    float: left;
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    margin: 1.2rem 1rem;
+    font-weight: bold;
+  }
+
+  #navbar div {
+    float: right;
+    display: block;
+    overflow: hidden;
+  }
+
+  #search,
+  #find {
+    display: inline-block;
+    margin: 0.8rem 1rem;
+    width: 450px;
+    height: auto;
+    padding: 5px 25px;
+    border-radius: 10px;
+  }
+
+  #find,
+  #footer {
+    display: none;
+  }
+
+  #main,
+  #detail {
+    float: left;
+    display: block;
+    overflow: hidden;
+    height: 82vh;
+  }
+
+  #main {
+    width: 60%;
+    overflow-y: scroll;
+  }
+
+  #detail {
+    position: relative;
+    width: 40%;
+    border-right: 1px solid #333;
+    background: #000;
+  }
+
+  #bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    filter: blur(3px) opacity(80%);
+  }
+
+  #figure {
+    position: relative;
+    text-align: center;
+    width: 55%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    margin: 15% auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 25px;
+    border: 1px solid #333;
+  }
+
+  #cover2 {
+    width: 45%;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 2rem auto;
+  }
+
+  #title2,
+  #artist2 {
+    width: 80%;
+    overflow: hidden;
+    display: block;
+    margin: 10px auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .row {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    padding: 10px 15px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+  }
+
+  .row:hover {
+    background: #ddd;
+  }
+
+  .row img,
+  .row div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .row div {
+    width: 80%;
+    height: auto;
+    white-space: nowrap;
+  }
+
+  .row div p {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .row div p:nth-child(odd) {
+    font-weight: bold;
+  }
+
+  .row img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  #player {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    background: #222;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #333;
+  }
+
+  #cover,
+  #info,
+  #audio {
+    vertical-align: middle;
+  }
+
+  #cover {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    background: #fff;
+  }
+
+  #info {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  #info p {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  #info p:nth-child(odd) {
+    font-weight: bold;
+  }
+
+  #audio {
+    width: 60%;
+    height: 25px;
+    display: inline-block;
+    margin-left: 30px;
+    overflow: hidden;
+  }
+
+  #controls {
+    margin: 1rem auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  #controls button {
+    background: #000;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #splash {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+  }
+
+  #splash div {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 50% auto;
+    transform: translate(25%, 50%);
+    border-left: 2px solid #fff;
+    padding-left: 15px;
+  }
+
+  #navbar,
+  #layout {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  #navbar {
+    background: #000;
+    color: #fff;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  #logo {
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    margin: 1rem 1rem;
+    font-weight: bold;
+  }
+
+  #navbar div {
+    display: block;
+    overflow: hidden;
+    background: #222;
+  }
+
+  #search,
+  #find {
+    display: block;
+    margin: 10px auto;
+    width: 95%;
+    height: auto;
+    padding: 10px 25px;
+    border-radius: 10px;
+  }
+
+  #search {
+    display: none;
+  }
+
+  #main,
+  #detail {
+    display: block;
+    overflow: hidden;
+    margin-top: 8rem;
+    margin-bottom: 12rem;
+  }
+
+  #main {
+    width: 100%;
+    overflow-y: scroll;
+    display: none;
+  }
+
+  #detail {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 70vh;
+    background: #000;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  #bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(3px) opacity(80%);
+  }
+
+  #figure {
+    position: relative;
+    text-align: center;
+    width: 85%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    margin: 20% auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 25px;
+    border: 1px solid #333;
+  }
+
+  #cover2 {
+    width: 45%;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 10px auto;
+  }
+
+  #title2,
+  #artist2 {
+    width: 80%;
+    overflow: hidden;
+    display: block;
+    margin: 10px auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .row {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    padding: 10px 15px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+  }
+
+  .row:hover {
+    background: #ddd;
+  }
+
+  .row img,
+  .row div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .row div {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .row div p {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .row div p:nth-child(odd) {
+    font-weight: bold;
+  }
+
+  .row img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  #player {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    background: #222;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #333;
+    margin-bottom: 2.8rem;
+  }
+
+  #cover,
+  #info,
+  #audio {
+    vertical-align: middle;
+  }
+
+  #cover {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    background: #fff;
+  }
+
+  #info {
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  #info p {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  #info p:nth-child(odd) {
+    font-weight: bold;
+  }
+
+  #audio {
+    width: 95%;
+    height: 25px;
+    display: block;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+
+  #controls {
+    margin: 1rem auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  #controls button {
+    background: #000;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin: 10px auto;
+  }
+
+  #footer {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
+
+  #footer a {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    width: 45%;
+    height: auto;
+    color: #fff;
+    background: #000;
+    text-transform: uppercase;
+    padding: 12px;
+    text-align: center;
+  }
+}
